@@ -23,3 +23,4 @@ rootProject.name = "ClasspathTest"
 include(":app")
 include(":runtimeOnly")
 include(":compileOnly")
+include(":implementation")

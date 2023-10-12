@@ -17,7 +17,6 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -40,12 +39,18 @@ android {
 
 androidComponents {
     beforeVariants(selector().withName("debug")) { variantBuilder ->
-        variantBuilder.enableAndroidTest = false
+        // I'd disable this too, but it makes design tools "run in emulator" feature fail
+        // variantBuilder.enableAndroidTest = false
         (variantBuilder as HasUnitTestBuilder).enableUnitTest = false
     }
 }
 
 dependencies {
+    runtimeOnly(project(":runtimeOnly"))
+    implementation(project(":implementation"))
+    compileOnly(project(":compileOnly"))
+
+
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)

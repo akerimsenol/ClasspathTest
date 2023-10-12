@@ -2,6 +2,24 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="CompileOnly">
+        <State />
+      </entry>
+      <entry key="ConflictCompileOnly">
+        <State />
+      </entry>
+      <entry key="ConflictImplementation">
+        <State />
+      </entry>
+      <entry key="ConflictRuntimeOnly">
+        <State />
+      </entry>
+      <entry key="Implementation">
+        <State />
+      </entry>
+      <entry key="RuntimeOnly">
+        <State />
+      </entry>
       <entry key="app">
         <State />
       </entry>

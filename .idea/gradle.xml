@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/compileOnly" />
+            <option value="$PROJECT_DIR$/implementation" />
             <option value="$PROJECT_DIR$/runtimeOnly" />
           </set>
         </option>

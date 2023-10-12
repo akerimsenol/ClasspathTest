@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "classpath.runtimeOnly"
+    namespace = "classpath.implementation"
     compileSdk = 34
 
     defaultConfig {
