@@ -16,11 +16,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
     }
 }
 
 rootProject.name = "ClasspathTest"
 include(":app")
-include(":runtimeOnly")
-include(":compileOnly")
-include(":implementation")
+//include(":runtimeOnly")
+//include(":compileOnly")
+//include(":implementation")

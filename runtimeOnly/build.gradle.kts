@@ -4,6 +4,7 @@ import com.android.build.api.variant.HasUnitTestBuilder
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
+    `maven-publish`
 }
 
 android {
@@ -21,11 +22,28 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    publishing {
+        singleVariant("debug")
+    }
 }
 
 androidComponents {
     beforeVariants(selector().withName("debug")) { variantBuilder ->
         variantBuilder.enableAndroidTest = false
         (variantBuilder as HasUnitTestBuilder).enableUnitTest = false
+    }
+}
+
+publishing {
+    publications {
+        register<MavenPublication>("debug") {
+            groupId = "classpath.test"
+            artifactId = "runtimeOnly"
+            version = "1.0"
+
+            afterEvaluate {
+                from(components["debug"])
+            }
+        }
     }
 }

@@ -46,9 +46,14 @@ androidComponents {
 }
 
 dependencies {
-    runtimeOnly(project(":runtimeOnly"))
+//    implementation("classpath.test:implementation:1.0")
+//    runtimeOnly("classpath.test:runtimeOnly:1.0")
+//    compileOnly("classpath.test:compileOnly:1.0")
+
     implementation(project(":implementation"))
+    runtimeOnly(project(":runtimeOnly"))
     compileOnly(project(":compileOnly"))
+
 
 
     implementation(libs.core.ktx)

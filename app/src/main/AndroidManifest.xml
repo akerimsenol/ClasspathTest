@@ -16,7 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data android:name="@string/app_name"/>
         <!--
         IDE -> resolves to implementation
         APK -> resolves to implementation
