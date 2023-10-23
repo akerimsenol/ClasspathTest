@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module1">Module1</string>
+    <string name="module1_2">@string/module2</string>
+    <string name="module1_3">@string/module3</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lib1">@string/module2_3</string>
+    <string name="lib1_2">@string/module3</string>
+    <string name="lib3">@string/module3</string>
+    <string name="lib1_3">@string/module1_3</string>
+</resources>
