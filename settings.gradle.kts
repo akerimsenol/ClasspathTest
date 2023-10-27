@@ -22,6 +22,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "ClasspathTest"
 include(":app")
-//include(":runtimeOnly")
-//include(":compileOnly")
-//include(":implementation")
+include(":lib")
+//include(":module1")
+//include(":module2")
+//include(":module3")

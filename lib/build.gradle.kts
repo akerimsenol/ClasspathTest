@@ -2,24 +2,17 @@ import com.android.build.api.variant.HasUnitTestBuilder
 
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
 }
 
 android {
-    namespace = "classpath.test"
+    namespace = "classpath.test.lib"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "classpath.test"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
-
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     compileOptions {
@@ -41,7 +34,7 @@ androidComponents {
     beforeVariants(selector().withName("debug")) { variantBuilder ->
         // I'd disable this too, but it makes design tools "run in emulator" feature fail
         // variantBuilder.enableAndroidTest = false
-        (variantBuilder as HasUnitTestBuilder).enableUnitTest = false
+        (variantBuilder as HasUnitTestBuilder).enableUnitTest = true
     }
 }
 

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module2">Module2</string>
+    <string name="module2_3">@string/module3</string>
+</resources>

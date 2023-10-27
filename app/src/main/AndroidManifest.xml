@@ -9,42 +9,13 @@
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".AppActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--
-        IDE -> resolves to implementation
-        APK -> resolves to implementation
-        -->
-        <meta-data
-            android:name="implementation"
-            android:value="@string/implementation"/>
-        <!--
-        IDE -> resolves to compileOnly - INCORRECT
-        APK -> resolves to implementation
-        -->
-        <meta-data
-            android:name="conflict"
-            android:value="@string/conflict"/>
-        <!--
-        IDE -> resolves to compileOnly
-        APK -> fails build, so commented out, but left for completeness
-         -->
-<!--        <meta-data-->
-<!--            android:name="compile_only"-->
-<!--            android:value="@string/compile_only"/>-->
-        <!--
-        IDE -> doesn't resolve
-        APK -> builds and resolves to RuntimeOnly, CORRECT
-        -->
-        <meta-data
-            android:name="runtime_only"
-            android:value="@string/runtime_only"/>
-
     </application>
 
 </manifest>
